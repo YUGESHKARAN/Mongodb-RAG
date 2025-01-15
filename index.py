@@ -14,6 +14,7 @@ load_dotenv()
 
 # Set API keys
 os.environ['GROQ_API_KEY'] = os.getenv('GROQ_API_KEY')
+os.environ['MONGODB_URI'] = os.getenv('MONGODB_URI')
 
 app = Flask(__name__)
 
@@ -156,4 +157,4 @@ def query_MongoDB_RAG():
         return jsonify({"response":response})
 
 if __name__ == "__main__":
-    app.run(port=os.getenv('PORT', 5000), host="0.0.0.0", debug=True)
+    app.run(port=os.getenv('PORT', 5000), host="0.0.0.0", debug=False)
