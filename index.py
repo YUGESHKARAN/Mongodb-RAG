@@ -14,7 +14,6 @@ load_dotenv()
 
 # Set API keys
 os.environ['GROQ_API_KEY'] = os.getenv('GROQ_API_KEY')
-os.environ['MONGODB_URI'] = os.getenv('MONGODB_URI')
 
 app = Flask(__name__)
 
