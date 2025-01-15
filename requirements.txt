@@ -4,7 +4,7 @@ langchain
 langchain_groq
 langchain_community
 langchain_core
-
+langsmith
 python-dotenv
 
 flask
