@@ -6,7 +6,7 @@ langchain_community
 langchain_core
 langsmith
 python-dotenv
-
+pymongo
 flask
 flask-cors
 
