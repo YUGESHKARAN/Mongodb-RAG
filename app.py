@@ -10,7 +10,7 @@ import os
 load_dotenv()
 
 # Set API keys
-os.environ['GROQ_API_KEY'] = os.getenv('GROQ_API_KEY')
+os.environ['groq_api_key'] = os.getenv('groq_api_key')
 os.environ['MONGODB_URI'] = os.getenv('MONGODB_URI')
 
 db = MongoDBDatabase("mongodb+srv://yugeshkaran01:GEMBkFW5Ny5wi4ox@blog.adtwl.mongodb.net/Blog-Data?retryWrites=true&w=majority&appName=blog", "Blog-Data")
