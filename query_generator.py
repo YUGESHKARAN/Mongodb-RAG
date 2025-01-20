@@ -19,6 +19,7 @@ load_dotenv()
 # Set API keys
 os.environ['groq_api_key'] = os.getenv('groq_api_key')
 os.environ['MONGODB_URI'] = os.getenv('MONGODB_URI')
+# os.environ['HUGGINGFACE_API_KEY'] = os.getenv('HUGGINGFACE_API_KEY')
 
 
 db = MongoDBDatabase("mongodb+srv://yugeshkaran01:GEMBkFW5Ny5wi4ox@blog.adtwl.mongodb.net/Blog-Data?retryWrites=true&w=majority&appName=blog", "Blog-Data")
@@ -93,7 +94,8 @@ MongoDB Query:
 """
 
     prompt = ChatPromptTemplate.from_template(template)
-    llm = ChatGroq(model_name="mixtral-8x7b-32768")
+    # llm = ChatGroq(model_name="mixtral-8x7b-32768")
+    llm = ChatGroq(model_name="llama-3.1-8b-instant")
 
     chain = (
     RunnablePassthrough.assign(
