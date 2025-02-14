@@ -82,7 +82,9 @@ MongoDB Query:
 """
 
     prompt = ChatPromptTemplate.from_template(template)
-    llm = ChatGroq(model_name="mixtral-8x7b-32768")
+    # llm = ChatGroq(model_name="mixtral-8x7b-32768")
+    llm = ChatGroq(model_name="llama-3.1-8b-instant")
+
 
     return (
         RunnablePassthrough.assign(
@@ -100,8 +102,11 @@ def response_generator(user_query: str, db: MongoDBDatabase, chat_history: list)
 
     # MongoDB Response chain to execute the query
     template = """
-    You are a data analyst for a blog website. You are interacting with a user who is asking you questions about the blog's database.
-    Based on the collection schema below, user question, MongoDB query, and MongoDB response, write a natural language response.
+    You are a admin for a blog website. You are interacting with a chief who is asking you questions about the blog's database.
+    Based on the collection schema below, cheif question, MongoDB query, and MongoDB response, write a natural language response with pre-size. 
+    note:
+    1.avoid generating more explanation content.
+    2. only specify the natural language response alone..
 
     <SCHEMA>{schema}</SCHEMA>
 
