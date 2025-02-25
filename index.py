@@ -82,8 +82,8 @@ MongoDB Query:
 """
 
     prompt = ChatPromptTemplate.from_template(template)
-    llm = ChatGroq(model_name="mixtral-8x7b-32768")
-    # llm = ChatGroq(model_name="llama-3.1-8b-instant")
+    # llm = ChatGroq(model_name="mixtral-8x7b-32768")
+    llm = ChatGroq(model_name="llama-3.1-8b-instant")
 
 
     return (
@@ -137,8 +137,8 @@ def response_generator(user_query: str, db: MongoDBDatabase, chat_history: list)
 
 
     # Initialize the LLM (Large Language Model)
-    llm = ChatGroq(model_name="mixtral-8x7b-32768")
-    # llm = ChatGroq(model_name="llama-3.1-8b-instant")
+    # llm = ChatGroq(model_name="mixtral-8x7b-32768")
+    llm = ChatGroq(model_name="llama-3.1-8b-instant")
 
     # Create the prompt with the template
     prompt = ChatPromptTemplate.from_template(template)
