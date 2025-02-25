@@ -82,8 +82,8 @@ MongoDB Query:
 """
 
     prompt = ChatPromptTemplate.from_template(template)
-    # llm = ChatGroq(model_name="mixtral-8x7b-32768")
-    llm = ChatGroq(model_name="llama-3.1-8b-instant")
+    llm = ChatGroq(model_name="mixtral-8x7b-32768")
+    # llm = ChatGroq(model_name="llama-3.1-8b-instant")
 
 
     return (
@@ -101,12 +101,28 @@ def response_generator(user_query: str, db: MongoDBDatabase, chat_history: list)
     mongo_chain = mogodb_query_generator(db)
 
     # MongoDB Response chain to execute the query
+    # template = """
+    # You are a admin for a blog website. You are interacting with a chief who is asking you questions about the blog's database.
+    # Based on the collection schema below, cheif question, MongoDB query, and MongoDB response, write a natural language response with pre-size. 
+    # note:
+    # 1.avoid generating more explanation content.
+    # 2. only specify the natural language response alone..
+
+    # <SCHEMA>{schema}</SCHEMA>
+
+    # Conversation History: {chat_history}
+    # MongoDB Query: <QUERY>{query}</QUERY>
+    # User Question: {question}
+    # MongoDB Response: {response}
+
+    # If the MongoDB response is not empty, confirm the existence of the post and author and show the post content.
+    # If the MongoDB response is empty, inform the user that the post wasn't found or suggest alternative searches.
+    # """
     template = """
-    You are a admin for a blog website. You are interacting with a chief who is asking you questions about the blog's database.
+    You are a copilot for a blog website. You are interacting with a chief who is asking you questions about the blog's database to generate content, statistics measure or required infromation from the database based on user query.
     Based on the collection schema below, cheif question, MongoDB query, and MongoDB response, write a natural language response with pre-size. 
     note:
-    1.avoid generating more explanation content.
-    2. only specify the natural language response alone..
+    1. Generate the content as per the conversation history and MongoDB response.
 
     <SCHEMA>{schema}</SCHEMA>
 
@@ -121,8 +137,8 @@ def response_generator(user_query: str, db: MongoDBDatabase, chat_history: list)
 
 
     # Initialize the LLM (Large Language Model)
-    # llm = ChatGroq(model_name="mixtral-8x7b-32768")
-    llm = ChatGroq(model_name="llama-3.1-8b-instant")
+    llm = ChatGroq(model_name="mixtral-8x7b-32768")
+    # llm = ChatGroq(model_name="llama-3.1-8b-instant")
 
     # Create the prompt with the template
     prompt = ChatPromptTemplate.from_template(template)
