@@ -10,5 +10,6 @@ pymongo
 flask
 flask-cors
 
+google-generativeai
 
 
