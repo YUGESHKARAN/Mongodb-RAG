@@ -98,6 +98,9 @@ MongoDB Query:collection.distinct("followers", {{"email": "ajayvarsan2020@gmail.
 Question: how many post author ajayvarsanr posted?
 MongoDB Query:collection.find({{'authorname': "ajayvarsanr"}}, {{'posts': 1, '_id': 0}})
 
+Question: When last post was posted and name the author?
+MongoDB Query: collection.find({{}}, {{'posts.timestamp': 1, 'authorname': 1, '_id': 0}}).sort({{'posts.timestamp': -1}}).limit(1)
+
 Note:
 - With the help of schema generate a executable MongoDB Query without any error and mustt not add length() or count() method anywhere in the query, i.e `collection.find({{'authorname': "Pradeep"}}, {{'posts': 1, '_id': 0}}).count()` or `collection.find({{'authorname': "Pradeep"}}, {{'posts': 1, '_id': 0}}).length()` and must not warp query with string and should not use findOne() method insted use, collection.find({{}}, {{'authorname': 1, 'password': 0, 'email': 0, 'profile': 0, 'otp': 0, 'otpExpiresAt': 0, 'followers': 0, '__v': 0}}).
 - Do not escape characters like underscores (`_`) or slashes (`/`) in names, emails, description, category or any other data. eg:'posts.description': '/Unsupervised learning/i' or  'posts.description': /.*Supervised Learning.*/i .
@@ -118,7 +121,7 @@ MongoDB Query:
 
     prompt = ChatPromptTemplate.from_template(template)
     # llm = ChatGroq(model_name="mixtral-8x7b-32768")
-    # llm = ChatGroq(model_name="llama-3.1-8b-instant")
+    llm = ChatGroq(model_name="llama-3.1-8b-instant")
 
 
     return (
