@@ -13,7 +13,7 @@ load_dotenv()
 os.environ['groq_api_key'] = os.getenv('groq_api_key')
 os.environ['MONGODB_URI'] = os.getenv('MONGODB_URI')
 
-db = MongoDBDatabase("mongodb+srv://yugeshkaran01:GEMBkFW5Ny5wi4ox@blog.adtwl.mongodb.net/Blog-Data?retryWrites=true&w=majority&appName=blog", "Blog-Data")
+db = MongoDBDatabase("mongodb+srv://yugeshkaran01:GEMBkFW5Ny5wi4ox@blog.adtwl.mongodb.net/Blog?retryWrites=true&w=majority&appName=blog", "Blog-Data")
 
 chat_history = []
 
@@ -75,7 +75,7 @@ MongoDB Query:
 """
 
     prompt = ChatPromptTemplate.from_template(template)
-    llm = ChatGroq(model_name="mixtral-8x7b-32768")
+    llm = ChatGroq(model_name="llama-3.1-8b-instant")
 
     return (
         RunnablePassthrough.assign(
@@ -109,7 +109,8 @@ def response_generator(user_query: str, db: MongoDBDatabase, chat_history: list)
 
 
     # Initialize the LLM (Large Language Model)
-    llm = ChatGroq(model_name='mixtral-8x7b-32768')
+    # llm = ChatGroq(model_name='mixtral-8x7b-32768')
+    llm = ChatGroq(model_name='llama-3.1-8b-instant')
 
     # Create the prompt with the template
     prompt = ChatPromptTemplate.from_template(template)

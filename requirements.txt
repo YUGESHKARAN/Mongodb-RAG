@@ -9,7 +9,7 @@ python-dotenv
 pymongo
 flask
 flask-cors
-
+langchain_openai
 google-generativeai
 
 
