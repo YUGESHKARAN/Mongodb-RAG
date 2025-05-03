@@ -1,4 +1,3 @@
-pymongo[srv]
 
 langchain
 langchain_groq
