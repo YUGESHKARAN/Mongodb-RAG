@@ -7,8 +7,8 @@ from langchain_core.runnables import RunnablePassthrough, RunnableLambda
 from langchain_core.output_parsers import StrOutputParser
 from mongodb_database import MongoDBDatabase
 from langchain_groq import ChatGroq
-import google.generativeai as genai
-from langchain_openai import ChatOpenAI
+# import google.generativeai as genai
+# from langchain_openai import ChatOpenAI
 import os
 
 
@@ -17,39 +17,39 @@ load_dotenv()
 # Set API keys
 # os.environ['GROQ_API_KEY'] = os.getenv('GROQ_API_KEY')
 os.environ['MONGODB_URI'] = os.getenv('MONGODB_URI')
-api_key = os.getenv("GOOGLE_API_KEY")
-genai.configure(api_key=api_key)
+# api_key = os.getenv("GOOGLE_API_KEY")
+# genai.configure(api_key=api_key)
 
-def gemini_runnable(input_text):
-    """Function to call Gemini model with improved error handling"""
+# def gemini_runnable(input_text):
+#     """Function to call Gemini model with improved error handling"""
   
-    # model = genai.GenerativeModel(model_name="gemma-2-2b-it")
-    # model = genai.GenerativeModel(model_name="gemini-2.0-flash")
-    # model = genai.GenerativeModel(model_name="gemini-2.0-flash-lite")
-    # model = genai.GenerativeModel(model_name="gemini-1.5-flash")
-    model = genai.GenerativeModel(model_name="gemini-1.5-flash")
+#     # model = genai.GenerativeModel(model_name="gemma-2-2b-it")
+#     # model = genai.GenerativeModel(model_name="gemini-2.0-flash")
+#     # model = genai.GenerativeModel(model_name="gemini-2.0-flash-lite")
+#     # model = genai.GenerativeModel(model_name="gemini-1.5-flash")
+#     model = genai.GenerativeModel(model_name="gemini-1.5-flash")
    
-    try:
-        # Ensure input is a string
-        if isinstance(input_text, tuple):
-            # If it's a tuple, convert to a string
-            input_text = str(input_text)
+#     try:
+#         # Ensure input is a string
+#         if isinstance(input_text, tuple):
+#             # If it's a tuple, convert to a string
+#             input_text = str(input_text)
         
-        # Ensure input is a string
-        if not isinstance(input_text, str):
-            input_text = str(input_text)
+#         # Ensure input is a string
+#         if not isinstance(input_text, str):
+#             input_text = str(input_text)
         
-        # Generate content
-        response = model.generate_content(input_text)
+#         # Generate content
+#         response = model.generate_content(input_text)
         
-        # Return text response
-        return response.text if response and hasattr(response, 'text') else "No response from model"
-    except Exception as e:
-        print(f"Error in Gemini model: {e}")
-        return f"Error occurred while generating content: {str(e)}"
+#         # Return text response
+#         return response.text if response and hasattr(response, 'text') else "No response from model"
+#     except Exception as e:
+#         print(f"Error in Gemini model: {e}")
+#         return f"Error occurred while generating content: {str(e)}"
 
 # Wrap the function in a RunnableLambda for LangChain
-gemini_model = RunnableLambda(gemini_runnable)
+# gemini_model = RunnableLambda(gemini_runnable)
 
 
 app = Flask(__name__)
