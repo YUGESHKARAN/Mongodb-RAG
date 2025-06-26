@@ -16,8 +16,6 @@
 
 ## Folder Structure
 
-![image1](image1)
-
 ```
 .
 ├── __pycache__/
