@@ -80,7 +80,7 @@ To deploy on Render:
 
 ## Contributing
 
-Contributions, suggestions, and improvements are welcome! Please open an issue or pull request.
+Contributions, suggestions, and improvements are welcome! Open an issue or pull request.
 
 ## Acknowledgements
 
