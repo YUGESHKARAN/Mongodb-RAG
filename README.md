@@ -7,6 +7,7 @@
 [![Pull Requests](https://img.shields.io/github/issues-pr/YUGESHKARAN/Mongodb-RAG)](https://github.com/YUGESHKARAN/Mongodb-RAG/pulls)
 [![Stars](https://img.shields.io/github/stars/YUGESHKARAN/Mongodb-RAG?style=social)](https://github.com/YUGESHKARAN/Mongodb-RAG/stargazers)
 [![Forks](https://img.shields.io/github/forks/YUGESHKARAN/Mongodb-RAG?style=social)](https://github.com/YUGESHKARAN/Mongodb-RAG/network/members)
+<br>
 [![Deploy on Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/)
 
 
