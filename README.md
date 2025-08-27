@@ -1,6 +1,14 @@
 # Mongodb-RAG
 
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/github/license/YUGESHKARAN/Mongodb-RAG)](https://github.com/YUGESHKARAN/Mongodb-RAG/blob/main/LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/YUGESHKARAN/Mongodb-RAG)](https://github.com/YUGESHKARAN/Mongodb-RAG/commits/main)
+[![Issues](https://img.shields.io/github/issues/YUGESHKARAN/Mongodb-RAG)](https://github.com/YUGESHKARAN/Mongodb-RAG/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/YUGESHKARAN/Mongodb-RAG)](https://github.com/YUGESHKARAN/Mongodb-RAG/pulls)
+[![Stars](https://img.shields.io/github/stars/YUGESHKARAN/Mongodb-RAG?style=social)](https://github.com/YUGESHKARAN/Mongodb-RAG/stargazers)
+[![Forks](https://img.shields.io/github/forks/YUGESHKARAN/Mongodb-RAG?style=social)](https://github.com/YUGESHKARAN/Mongodb-RAG/network/members)
 [![Deploy on Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/)
+
 
 ## Overview
 
