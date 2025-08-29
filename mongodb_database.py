@@ -22,6 +22,30 @@ class MongoDBDatabase:
         
         results =list(eval(query))
         return results
+    
+
+    # def run(self, collection_name, query):
+    #     collection = self.db[collection_name]
+
+    #     if query == "unset_announcement_all":
+    #         result = collection.update_many(
+    #             {},  # This means update all documents
+    #             {"$unset": {"announcementSchema": ""}}
+    #         )
+    #         results = {
+    #             "matched_count": result.matched_count,
+    #             "modified_count": result.modified_count,
+    #             "acknowledged": result.acknowledged
+    #         }
+    #         return results
+
+    #     elif query == "distinct_authorname":
+    #         return collection.distinct("authorname")
+
+    #     else:
+    #         return "Invalid query"
+
+
 
 # Usage Example
 # db = MongoDBDatabase("mongodb://localhost:27017", "your_database_name")

@@ -22,7 +22,7 @@ os.environ['MONGODB_URI'] = os.getenv('MONGODB_URI')
 # os.environ['HUGGINGFACE_API_KEY'] = os.getenv('HUGGINGFACE_API_KEY')
 
 
-db = MongoDBDatabase("mongodb+srv://yugeshkaran01:GEMBkFW5Ny5wi4ox@blog.adtwl.mongodb.net/Blog-Data?retryWrites=true&w=majority&appName=blog", "Blog-Data")
+db = MongoDBDatabase("mongodb+srv://yugeshkaran01:GEMBkFW5Ny5wi4ox@blog.adtwl.mongodb.net/Blog?retryWrites=true&w=majority&appName=blog", "Blog")
 
 
 # db.get_collection_schema('authors')
@@ -121,4 +121,6 @@ while True:
             chat_history.append(AIMessage(content=query))
         print(query)
         print("response",db.run('authors',query))
+
+        # print("response",db.run('authors','unset_announcement_all'))
 
