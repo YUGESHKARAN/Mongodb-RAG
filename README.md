@@ -33,8 +33,7 @@
 ├── index.py
 ├── mongodb_database.py
 ├── query_generator.py
-├── requirements.txt
-└── vercel.json
+└── requirements.txt
 ```
 
 - **app.py**: Main application logic (entry point for web deployment).
@@ -42,7 +41,6 @@
 - **mongodb_database.py**: MongoDB connection and data handling logic.
 - **query_generator.py**: Core RAG logic for generating and retrieving responses.
 - **requirements.txt**: Python package dependencies.
-- **vercel.json**: Vercel deployment configuration (may be adapted for Render).
 
 ## 🚀 Getting Started
 
@@ -73,7 +71,7 @@
    python app.py
    ```
 
-### ☁️ Deployment
+## ☁️ Deployment
 
 To deploy on Render:
 - Create a new Web Service on [Render](https://render.com/).
