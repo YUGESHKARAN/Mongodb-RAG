@@ -3,10 +3,11 @@ from flask_cors import CORS
 from dotenv import load_dotenv
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.runnables import RunnablePassthrough
+from langchain_core.runnables import RunnablePassthrough, RunnableLambda
 from langchain_core.output_parsers import StrOutputParser
 from mongodb_database import MongoDBDatabase
 from langchain_groq import ChatGroq
+# import google.generativeai as genai
 import os
 
 
@@ -14,14 +15,15 @@ load_dotenv()
 
 # Set API keys
 os.environ['GROQ_API_KEY'] = os.getenv('GROQ_API_KEY')
-os.environ['MONGODB_URI'] = os.getenv('MONGODB_URI')
+
 
 app = Flask(__name__)
 
 CORS(app)
 
-db = MongoDBDatabase("mongodb+srv://yugeshkaran01:GEMBkFW5Ny5wi4ox@blog.adtwl.mongodb.net/Blog-Data?retryWrites=true&w=majority&appName=blog", "Blog-Data")
-
+mongoDB_URI = os.getenv('MONGODB_URI')
+monDB_Name = os.getenv('MONGODB_DB_NAME')
+db = MongoDBDatabase(mongoDB_URI,monDB_Name )
 chat_history = []
 
 def mogodb_query_generator(db):

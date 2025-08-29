@@ -9,5 +9,6 @@ python-dotenv
 pymongo
 flask
 flask-cors
+google-generativeai
 
 
