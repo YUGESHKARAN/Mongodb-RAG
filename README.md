@@ -1,4 +1,4 @@
-# Mongodb-RAG
+# 🛢️ Mongodb-RAG 🍃
 
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/github/license/YUGESHKARAN/Mongodb-RAG)](https://github.com/YUGESHKARAN/Mongodb-RAG/blob/main/LICENSE)
@@ -11,11 +11,11 @@
 [![Deploy on Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/)
 
 
-## Overview
+## 📖 Overview
 
 **Mongodb-RAG** is a Python project that implements a Retrieval Augmented Generation (RAG) system using MongoDB for storage and the powerful `llama-3.1-8b-instant` LLM for generation. This project demonstrates scalable, context-aware response generation by combining efficient document retrieval from MongoDB with state-of-the-art language modeling.
 
-## Features
+## ✨ Features
 
 - **Retrieval Augmented Generation (RAG):** Combines MongoDB-based retrieval with LLM-powered answer generation.
 - **MongoDB Integration:** Efficient storage and retrieval of documents and context.
@@ -23,7 +23,7 @@
 - **Web Deployment Ready:** Easily deployable to Render.
 - **Clean Python Codebase:** Modular Python scripts for easy understanding and customization.
 
-## Folder Structure
+## 📁 Folder Structure
 
 ```
 .
@@ -44,15 +44,15 @@
 - **requirements.txt**: Python package dependencies.
 - **vercel.json**: Vercel deployment configuration (may be adapted for Render).
 
-## Getting Started
+## 🚀 Getting Started
 
-### Prerequisites
+### ✅ Prerequisites
 
 - Python 3.8+
 - MongoDB instance (local or Atlas)
 - (Optionally) Node.js & Render CLI for deployment
 
-### Installation
+### ⚙️ Installation
 
 1. **Clone the repository**
    ```bash
@@ -73,7 +73,7 @@
    python app.py
    ```
 
-### Deployment
+### ☁️ Deployment
 
 To deploy on Render:
 - Create a new Web Service on [Render](https://render.com/).
@@ -82,16 +82,16 @@ To deploy on Render:
 - Add your environment variables (e.g.,MODEL_API_KEY, MongoDB URI) in the Render dashboard.
 - Deploy!
 
-## Usage
+## 🌐 Usage
 
 - Access the service via the URL provided by Render after deployment.
 - The system retrieves relevant documents from MongoDB and generates responses using the `llama-3.1-8b-instant` LLM.
 
-## Contributing
+## 🤝 Contributing
 
 Contributions, suggestions, and improvements are welcome! Open an issue or pull request.
 
-## Acknowledgements
+## 🙌 Acknowledgements
 
 - [MongoDB](https://www.mongodb.com/)
 - [Meta Llama-3](https://ai.meta.com/llama/)
