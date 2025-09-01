@@ -10,7 +10,7 @@
 <br>
 [![Deploy on Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/)
 
-![Product Control Agent UI](/assets/MongoDB_Architecture.png)
+![MongoDB Architecture](/assets/MongoDB_Architecture.png)
 ## 📖 Overview
 
 **Mongodb-RAG** is a Python project that implements a Retrieval Augmented Generation (RAG) system using MongoDB for storage and the powerful `llama-3.1-8b-instant` LLM for generation. This project demonstrates scalable, context-aware response generation by combining efficient document retrieval from MongoDB with state-of-the-art language modeling.
